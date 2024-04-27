@@ -70,8 +70,9 @@ const Calendar: React.FC<Props> = ({ events, loadUserEvents }) => {
         <div className='calendar'>
             {sortedGroupKeys.map(dayKey => {
                 const events = groupedEvents ? groupedEvents[dayKey] : [];
+                console.log(dayKey)
                 const groupDate = new Date(dayKey);
-                const day = groupDate.getDate();
+                const day = groupDate.getUTCDate();
                 const month = groupDate.toLocaleString(undefined, { month: 'long', timeZone: 'UTC' });
                 return (
                     <div className='calendar-day'>
