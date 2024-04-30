@@ -5,10 +5,12 @@ import cx from 'classnames';
 import { selectDateStart, start, stop } from '../../redux/recorder';
 import { addZero } from '../../lib/utils';
 import { createUserEvent } from '../../redux/user-events';
+import { useAppDispatch } from '../../redux/store';
 
 
 const Recorder = () => {
     const dispatch = useDispatch()
+    const appDispatch = useAppDispatch()
     const dateStart = useSelector(selectDateStart);
     const started = dateStart !== '';
     let interval = useRef<number>(0);
@@ -19,7 +21,7 @@ const Recorder = () => {
     const handleClick = () => {
         if (started) {
             window.clearInterval(interval.current);
-            dispatch(createUserEvent());
+            appDispatch(createUserEvent());
             dispatch(stop());
         } else {
             dispatch(start());
