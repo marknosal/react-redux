@@ -62,7 +62,7 @@ const Calendar: React.FC<Props> = ({ events, loadUserEvents }) => {
     if (events.length) {
         groupedEvents = groupEventsByDay(events);
         sortedGroupKeys = Object.keys(groupedEvents).sort(
-            (date1, date2) => +new Date(date1) - +new Date(date2)
+            (date1, date2) => +new Date(date2) - +new Date(date1)
         );
     }
 
@@ -86,7 +86,7 @@ const Calendar: React.FC<Props> = ({ events, loadUserEvents }) => {
                                 return (
                                     <div key={event.id} className='calendar-event'>
                                         <div className='calendar-event-info'>
-                                            <div className='calendar-event-time'>10:00 - 12:00</div>
+                                            <div className='calendar-event-time'>10:00 - 12:00{day} - {month}</div>
                                             <div className='calendar-event-title'>
                                                 {event.title}
                                             </div>

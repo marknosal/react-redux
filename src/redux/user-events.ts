@@ -59,7 +59,7 @@ export const loadUserEvents = (): ThunkAction<
     }
 };
 
-const CREATE_REQUEST = 'userEvents/create_request';
+const CREATE_REQUEST = 'userEvents//create_request';
 
 interface CreateRequestAction extends Action<typeof CREATE_REQUEST> {}
 
@@ -93,7 +93,7 @@ export const createUserEvent = (): ThunkAction<
             dateEnd: new Date().toISOString()
         };
 
-        const response = await fetch('http:/localhost:3001/events', {
+        const response = await fetch('http://localhost:3001/events', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
