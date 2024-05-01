@@ -1,7 +1,7 @@
 {
   "events": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Jogging",
       "dateStart": "2020-01-15T17:41:28.652Z",
       "dateEnd": "2020-01-15T18:41:28.652Z"
@@ -10,7 +10,7 @@
       "title": "Learning TypeScript",
       "dateStart": "2020-01-29T19:00:28.652Z",
       "dateEnd": "2020-01-29T20:00:28.652Z",
-      "id": 2
+      "id": "2"
     }
   ]
 }
